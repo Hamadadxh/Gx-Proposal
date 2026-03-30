@@ -329,10 +329,22 @@ ul li {
 <p class="price">6000 دولار</p>
 </div>
 
+<div style="text-align:center; margin:40px;">
+</div>
 
 </div>
 
-
+<script>
+const elements = document.querySelectorAll('.fade');
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
