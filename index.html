@@ -13,12 +13,13 @@ body {
   margin: 0;
   font-family: 'Cairo', sans-serif;
   background: #222323;
-  color: #e6f4f1;
-  line-height: 1.9;
+  color: #ffffff;
+  line-height: 2;
+  font-size: 16px;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 60px 20px;
 }
@@ -42,7 +43,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(34,35,35,0.85);
+  background: rgba(34,35,35,0.9);
 }
 
 .cover-content {
@@ -53,52 +54,58 @@ body {
 .logos {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 80px;
   margin-bottom: 40px;
 }
 
 .logo {
   height: 180px;
-  max-width: 260px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 20px rgba(0,0,0,0.6));
 }
 
 h1 {
-  font-size: 42px;
-  color: #c7ffbb;
-  margin: 10px 0;
+  color: #ffffff;
+  font-size: 44px;
+  font-weight: 800;
 }
 
 h2 {
   color: #c7ffbb;
+  font-size: 20px;
   font-weight: 500;
-}
-
-.cover p {
-  color: #5e5f5f;
 }
 
 .section {
   background: #2a2b2b;
-  padding: 30px;
+  padding: 35px;
   margin-bottom: 40px;
-  border-radius: 12px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .section h3 {
   color: #c7ffbb;
-  margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.highlight {
-  color: #c7ffbb;
-  font-weight: 700;
+.section h4 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.section h5 {
+  color: #baf5ff;
+  font-size: 15px;
+  margin-top: 15px;
 }
 
 ul {
   padding-right: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
 }
 
 .table {
@@ -111,6 +118,7 @@ ul {
   background: #2f3131;
   color: #c7ffbb;
   padding: 14px;
+  font-size: 14px;
 }
 
 .table td {
@@ -118,25 +126,35 @@ ul {
   padding: 14px;
   border-top: 1px solid #3a3b3b;
   text-align: center;
+  font-size: 14px;
 }
 
 .price {
-  font-size: 28px;
-  color: #c7ffbb;
+  font-size: 30px;
+  color: #ffffff;
   font-weight: 800;
   text-align: center;
+  margin-top: 15px;
 }
 
-.footer {
-  text-align: center;
-  padding: 40px;
-  color: #5e5f5f;
+.btn {
+  background:#c7ffbb;
+  color:#222;
+  padding:14px 30px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
 }
 
-@media (max-width: 768px) {
-  .logo {
-    height: 120px;
-  }
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 </style>
@@ -145,63 +163,64 @@ ul {
 <body>
 
 <section class="cover">
-  <div class="cover-bg"></div>
-  <div class="overlay"></div>
+<div class="cover-bg"></div>
+<div class="overlay"></div>
 
-  <div class="cover-content">
-    <div class="logos">
-      <img src="GX-01.png" class="logo">
-      <img src="Kaiian.png" class="logo">
-    </div>
+<div class="cover-content">
+<div class="logos">
+<img src="GX-01.png" class="logo">
+<img src="Kaiian.png" class="logo">
+</div>
 
-    <h1>GX × Kaiian</h1>
-    <h2>نظام مراقبة وتحليل تسعيرات تطبيقات النقل</h2>
-    <p>عرض فني ومالي – Phase 1 + Phase 2</p>
-  </div>
+<h1>GX × Kaiian</h1>
+<h2>نظام مراقبة وتحليل تسعيرات التطبيقات</h2>
+</div>
 </section>
 
 <div class="container">
 
-<div class="section">
-<h3>نظرة عامة</h3>
-<p>
-يهدف هذا المشروع إلى تطوير نظام ذكي لمراقبة وتحليل تسعيرات تطبيقات النقل،
-مما يوفر رؤية واضحة للسوق ويساعد في اتخاذ قرارات مبنية على بيانات حقيقية.
-<br><br>
-النظام مصمم ليكون قابل للتوسع والتحول إلى منصة تحليل متكاملة.
-</p>
-</div>
-
-<div class="section">
-<h3>المشكلة</h3>
-<ul>
-<li>عدم وجود رؤية واضحة لأسعار المنافسين</li>
-<li>تغير الأسعار بشكل مستمر</li>
-<li>صعوبة تحليل السوق</li>
-<li>قرارات بدون بيانات دقيقة</li>
-</ul>
-</div>
-
-<div class="section">
-<h3>الحل</h3>
-<p>
-نظام يقوم بجمع بيانات الأسعار تلقائيًا وتحليلها وعرضها في صورة واضحة تساعد في اتخاذ القرار.
-</p>
-</div>
-
-<div class="section">
+<div class="section fade">
 <h3>Phase 1 – استخراج البيانات</h3>
 
+<h4>الأهداف</h4>
 <ul>
-<li>استخراج الأسعار من التطبيقات</li>
-<li>تحديد المواقع</li>
-<li>تخزين البيانات</li>
-<li>تشغيل دوري</li>
-<li>تصدير Excel</li>
+<li>استخراج الأسعار</li>
+<li>تسجيل البيانات</li>
+<li>تحليل السوق</li>
 </ul>
 
-<p class="highlight">مدة التنفيذ: 3 إلى 4 أسابيع</p>
-<p class="price">3000 دولار أمريكي</p>
+<h4>نطاق العمل</h4>
+
+<h5>استخراج الأسعار</h5>
+<ul>
+<li>حسابات ركاب</li>
+<li>طلبات تلقائية</li>
+<li>تحديد المواقع</li>
+</ul>
+
+<h5>تسجيل البيانات</h5>
+<ul>
+<li>السعر</li>
+<li>الوقت</li>
+<li>التطبيق</li>
+<li>الموقع</li>
+</ul>
+
+<h5>الجدولة</h5>
+<ul>
+<li>تشغيل كل ساعة</li>
+<li>أوقات الذروة</li>
+<li>تخصيص الوقت</li>
+</ul>
+
+<h5>التصدير</h5>
+<ul>
+<li>Excel</li>
+<li>تنظيم البيانات</li>
+<li>تحليل سهل</li>
+</ul>
+
+<p class="price">3000 دولار</p>
 
 <table class="table">
 <tr>
@@ -210,42 +229,70 @@ ul {
 <th>الناتج</th>
 </tr>
 <tr>
-<td>الأول</td>
-<td>إعداد السيرفر</td>
-<td>بنية جاهزة</td>
+<td>1</td>
+<td>إعداد</td>
+<td>بنية</td>
 </tr>
 <tr>
-<td>الثاني</td>
-<td>تطوير النظام</td>
+<td>2</td>
+<td>تطوير</td>
 <td>نسخة أولية</td>
 </tr>
 <tr>
-<td>الثالث</td>
+<td>3</td>
 <td>تحسين</td>
-<td>نظام مستقر</td>
+<td>استقرار</td>
 </tr>
 <tr>
-<td>الرابع</td>
+<td>4</td>
 <td>اختبار</td>
-<td>نسخة نهائية</td>
+<td>تسليم</td>
 </tr>
 </table>
 
 </div>
 
-<div class="section">
+<div class="section fade">
 <h3>Phase 2 – التحليل والDashboard</h3>
 
+<h4>الأهداف</h4>
 <ul>
-<li>Dashboard تفاعلي</li>
-<li>تحليل الأسعار</li>
-<li>مقارنة التطبيقات</li>
-<li>تقارير</li>
-<li>إشعارات</li>
+<li>Insights</li>
+<li>مراقبة لحظية</li>
+<li>تحسين القرار</li>
 </ul>
 
-<p class="highlight">مدة التنفيذ: 6 إلى 8 أسابيع</p>
-<p class="price">3000 دولار أمريكي</p>
+<h4>نطاق العمل</h4>
+
+<h5>Backend</h5>
+<ul>
+<li>API</li>
+<li>Database</li>
+<li>صلاحيات</li>
+</ul>
+
+<h5>Dashboard</h5>
+<ul>
+<li>عرض لحظي</li>
+<li>فلترة</li>
+<li>واجهة سهلة</li>
+</ul>
+
+<h5>التحليل</h5>
+<ul>
+<li>مقارنات</li>
+<li>متوسطات</li>
+<li>فروقات</li>
+</ul>
+
+<h5>الإشعارات</h5>
+<ul>
+<li>تنبيهات</li>
+<li>عروض</li>
+<li>Logs</li>
+</ul>
+
+<p class="price">3000 دولار</p>
 
 <table class="table">
 <tr>
@@ -254,53 +301,51 @@ ul {
 <th>الناتج</th>
 </tr>
 <tr>
-<td>1 - 2</td>
+<td>1-2</td>
 <td>Dashboard</td>
 <td>واجهة</td>
 </tr>
 <tr>
-<td>3 - 4</td>
+<td>3-4</td>
 <td>تحليل</td>
-<td>نظام تحليل</td>
+<td>System</td>
 </tr>
 <tr>
-<td>5 - 6</td>
+<td>5-6</td>
 <td>إشعارات</td>
-<td>نظام متكامل</td>
+<td>تكامل</td>
 </tr>
 <tr>
-<td>7 - 8</td>
+<td>7-8</td>
 <td>اختبار</td>
-<td>نسخة مستقرة</td>
+<td>استقرار</td>
 </tr>
 </table>
 
 </div>
 
-<div class="section">
+<div class="section fade">
 <h3>إجمالي المشروع</h3>
-<p class="price">6000 دولار أمريكي</p>
+<p class="price">6000 دولار</p>
 </div>
 
-<div style="text-align:center; margin:40px 0;">
-<a href="dashboard.html" style="
-background:#c7ffbb;
-color:#222;
-padding:14px 30px;
-border-radius:10px;
-text-decoration:none;
-font-weight:700;
-font-size:16px;
-">
-مشاهدة Demo Dashboard
-</a>
+<div style="text-align:center; margin:40px;">
+<a href="dashboard.html" class="btn">مشاهدة Demo Dashboard</a>
 </div>
 
 </div>
 
-<div class="footer">
-GX © 2026
-</div>
+<script>
+const elements = document.querySelectorAll('.fade');
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
